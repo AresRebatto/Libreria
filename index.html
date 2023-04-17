@@ -1,12 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Log-In</title>
+        <link rel="stylesheet" href="Style/index.css">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="boxForm" name="box"><br><br>
+            <h1 class="title">Log-in</h1>
+            <form method="post" name="modulo">
+                <b>Nome</b><input type="text" name="nome" class="input"><br><p id="failname"></p><br>
+                <b>Cognome</b><input type="text" name="cognome" class="input"><br><p id="failsurname"></p><br>
+                <b>Email</b><input type="text" name="email" class="input"><br><br>
+                <b>Data di nascita</b><input type="date" name="nascita" class="input"><br><br><br>
+            </form>
+            <input type="submit" value="Invia" onClick="Modulo()" class="invia">
+        </div>
+        <div class="aside">
+        </div>
+        <script type="text/javascript" src="verifica.js"></script>
+    </body>
 </html>

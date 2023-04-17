@@ -1,0 +1,87 @@
+body{
+    background: linear-gradient(106.44deg, #FD4C4C 29.65%, rgba(46, 66, 241, 0.82) 100%);
+    display: flex;
+    font-family: 'Nunito', sans-serif;
+}
+
+.aside{
+    background-image: url("img/low-poly-grid-haikei (1).svg");
+    width: 450px;
+    height: 60%;
+    position: absolute;
+    left:19%;
+    top:20%;
+}
+
+.boxForm
+{
+    background-color: white;
+    border-radius: 16px;
+    position: absolute;
+    height: 60%;
+    width: 30%;
+    left: 42%;
+    top:20%;
+}
+
+form{
+    position: relative;
+    left: 25%;
+}
+
+.title
+{
+    position: relative;
+    left: 25%;
+}
+
+.input
+{
+    margin-left: 10px;
+    border-radius: 16px;
+    border-right: none;
+    border-top: none;
+    border-color: rgba(97, 97, 97, 0.8);
+}
+
+.input:focus
+{
+    outline: none;
+    border-color: rgb(27, 27, 27);
+}
+
+.invia
+{
+    background-color: #363636;
+    border: none;
+    width: 70px;
+    height: 35px;
+    border-radius: 17px;
+    color: white;
+    position: relative;
+    left: 72%;
+}
+
+.invia:hover
+{
+    background-color: #242424;
+    cursor: pointer;
+}
+
+#failname
+{
+    color: red;
+    position: relative;
+    left: 70px;
+    font-size: 13px;
+    margin: 0;
+}
+
+#failsurname
+{
+    color: red;
+    position: relative;
+    left: 105px;
+    font-size: 13px;
+    margin: 0;
+}
