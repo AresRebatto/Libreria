@@ -6,11 +6,11 @@ body{
 
 .aside{
     background-image: url("img/low-poly-grid-haikei (1).svg");
-    width: 450px;
-    height: 60%;
+    width: 370px;
+    height: 70%;
     position: absolute;
-    left:19%;
-    top:20%;
+    left:20%;
+    top:15%;
 }
 
 .boxForm
@@ -18,10 +18,10 @@ body{
     background-color: white;
     border-radius: 16px;
     position: absolute;
-    height: 60%;
-    width: 30%;
-    left: 42%;
-    top:20%;
+    height: 70%;
+    width: 45%;
+    left: 38%;
+    top:15%;
 }
 
 form{
@@ -59,7 +59,7 @@ form{
     border-radius: 17px;
     color: white;
     position: relative;
-    left: 72%;
+    left: 56%;
 }
 
 .invia:hover
