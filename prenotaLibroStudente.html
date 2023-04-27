@@ -1,14 +1,96 @@
-<!-- Li, scrivi il codice qui -->
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Prenotazione Libro</title>
-    <link rel="stylesheet" href="Style/prenonaLibro.css">
+    <link rel="icon" href="Style/img/book.png">
+    <link rel="stylesheet" href="Style/prenotaLibro.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700&display=swap" rel="stylesheet">
+
+    <script type="text/javascript" src="verifica.js"></script>
 </head>
+
 <body>
-    
+    <div></div>
+    <div class="box"></div>
+    <div class="Classe">
+        <table>
+            <tr>
+                <td>
+                    <p class="text1">Classe:</p>
+                </td>
+                <td>
+                    <input type="text" name="Classevalue" class="input inputext">
+                </td>
+                <td style="width: 10%;"></td>
+                <td>
+                    <p class="text1">Sezione:</p>
+                </td>
+                <td>
+                    <input type="text" name="Sezionevalue" class="input inputext">
+                </td>
+            </tr>
+            <tr>
+                <td style="height: 60px;"></td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <select name="Libro" class="text1">
+                        <option selected> --Selezione il libro-- </option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td style="height: 60px;"></td>
+            </tr>
+            <tr>
+                <table>
+                    <tr>
+                        <td>
+                            <p class="text1">Data di ritiro: </p>
+                        </td>
+                        <td>
+                            <input type="text" name="RitiroGiorno" class="OuputData input" maxlength="2">
+                        </td>
+                        <td>
+                            <p class="text1">/</p>
+                        </td>
+                        <td>
+                            <input type="text" name="RitiroMese" class="OuputData input" maxlength="2">
+                        </td>
+                        <td>
+                            <p class="text1">/</p>
+                        </td>
+                        <td>
+                            <input type="text" name="RitiroAnno" class="OuputData input" maxlength="4">
+                        </td>
+                    </tr>
+                </table>
+            </tr>
+            <tr>
+                <td style="height: 60px;"></td>
+            </tr>
+            <tr>
+                <table>
+                    <tr>
+                        <td>
+                            <P class="text1">Data di Riconsegna:</P>
+                        <td>
+                            <p id="dataRiconsegna"></p>
+                        </td>
+                    </tr>
+                </table>
+            </tr>
+        </table>
+    </div>
+    <button name="InviaLibro" class="invia">Invia</button>
 </body>
 </html>

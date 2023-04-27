@@ -1,0 +1,70 @@
+body {
+    background: linear-gradient(106.44deg, #FD4C4C 29.65%, rgba(46, 66, 241, 0.82) 100%);
+    display: flex;
+    font-family: 'Nunito', sans-serif;
+}
+
+.box {
+    position: fixed;
+    left: 4%;
+    top: 18%;
+    height: 75%;
+    width: 65%;
+    background-color: white;
+    border-radius: 16px;
+    opacity: 0.5;
+    padding: 20px;
+}
+
+.text1 {
+    font-size: 20px;
+}
+
+.Ouput {
+    height: 40px;
+    margin-left: 10px;
+    border-radius: 16px;
+    border-right: none;
+    border-top: none;
+    border-color: rgba(255, 253, 253, 0.8);
+}
+
+.Classe {
+    height: auto;
+    width: auto;
+    position: fixed;
+    left: 6%;
+    top: 25%;
+}
+
+.OuputData {
+    height: 40px;
+    width: 60px;
+    margin-left: 10px;
+    border-radius: 16px;
+    border-right: none;
+    border-top: none;
+    border-color: rgba(255, 253, 253, 0.8);
+}
+
+.input{
+    outline: none;
+    border:solid;
+    border-color: white;
+    opacity: 50%;
+}
+
+.inputext
+{
+    border-radius: 16px;
+}
+.invia{
+    position: fixed;
+    top: 86%;
+    left: 58%;
+    height: 5%;
+    width: 8%;
+    border-radius: 16px;
+    background: #ffffff;
+    border: none;
+}
