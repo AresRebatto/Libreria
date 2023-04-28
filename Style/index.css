@@ -4,6 +4,13 @@ body{
     font-family: 'Nunito', sans-serif;
 }
 
+p{
+    color: red;
+    font-size: 11px;
+    margin-top: 0px;
+    margin-left: 65px;
+}
+
 .aside{
     background-image: url("img/low-poly-grid-haikei (1).svg");
     width: 370px;

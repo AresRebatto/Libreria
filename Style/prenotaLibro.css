@@ -1,23 +1,27 @@
 body {
-    background: linear-gradient(106.44deg, #FD4C4C 29.65%, rgba(46, 66, 241, 0.82) 100%);
+    background: linear-gradient(107.56deg, #FD4C4C 9.9%, #5663F1 100%);
     display: flex;
     font-family: 'Nunito', sans-serif;
 }
 
 .box {
     position: fixed;
-    left: 4%;
-    top: 18%;
+    left: 10%;
+    top: 14%;
     height: 75%;
     width: 65%;
-    background-color: white;
-    border-radius: 16px;
-    opacity: 0.5;
+    background: linear-gradient(108.73deg, rgba(217, 217, 217, 0.412) 51.75%, rgba(217, 217, 217, 0.46) 95.31%);
+    backdrop-filter: blur(2px);
+    border-radius: 39px;
     padding: 20px;
 }
 
 .text1 {
     font-size: 20px;
+}
+
+p{
+    color: white;
 }
 
 .Ouput {
@@ -33,8 +37,9 @@ body {
     height: auto;
     width: auto;
     position: fixed;
-    left: 6%;
-    top: 25%;
+    left: 13%;
+    top: 20%;
+    color: white;
 }
 
 .OuputData {
@@ -60,11 +65,27 @@ body {
 }
 .invia{
     position: fixed;
-    top: 86%;
-    left: 58%;
+    top: 83%;
+    left: 56%;
     height: 5%;
     width: 8%;
-    border-radius: 16px;
+    border-radius: 30px;
     background: #ffffff;
     border: none;
+    font-size: 19px;
+}
+
+.invia:hover{
+    background-color: rgb(209, 209, 209);
+    cursor: pointer;
+}
+
+.info
+{
+    display: flex;
+    margin-left: 70%;
+}
+
+#cognomeInfo, #emailInfo{
+    margin-left: 30px;
 }

@@ -1,13 +1,17 @@
+var nome;
+var cognome;
+var email;
+
 function Modulo() 
 {
     // Variabili associate ai campi del modulo
-    var nome = document.modulo.nome.value;
+    nome = document.modulo.nome.value;
     var failname = document.getElementById("failname");
     
-    var cognome = document.modulo.cognome.value;
+    cognome = document.modulo.cognome.value;
     var failsurname = document.getElementById("failsurname");
     //var nascita = document.modulo.nascita.value;
-    var email = document.modulo.email.value;
+    email = document.modulo.email.value;
     var failemail = document.getElementById("failemail");
     var dominio = getDomain(email);
 
@@ -36,7 +40,7 @@ function Modulo()
         cognomeVerifica = true;
     }
 
-    if(dominio != "ittsrimini.edu.it" || dominio != "studenti.ittsrimini.edu.it")
+    if(dominio != "ittsrimini.edu.it" && dominio != "studenti.ittsrimini.edu.it")
     {
         failemail.innerHTML = "Si prega di inserire un indirizzo e-mail valido";
         emailVerifica = false;
@@ -48,9 +52,10 @@ function Modulo()
 
     if(nomeVerifica && cognomeVerifica && emailVerifica)
     {
-        if(dominio == "ittsrimini.edu.it")
+        if(dominio == "studenti.ittsrimini.edu.it")
         {
             window.location = "prenotaLibroStudente.html";
+            
         }else
         {
             window.location = "prenotaLibroProf.html";
@@ -62,4 +67,12 @@ function Modulo()
 function getDomain(email) {
     var parti = email.split('@');
     return parti[1];
+}
+
+
+
+function Submit(){
+    document.getElementById("nomeInfo").innerHTML = nome;
+    document.getElementById("cognomeInfo").innerHTML = cognome;
+    document.getElementById("emailInfo").innerHTML = email;
 }
