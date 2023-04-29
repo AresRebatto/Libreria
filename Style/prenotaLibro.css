@@ -4,88 +4,15 @@ body {
     font-family: 'Nunito', sans-serif;
 }
 
-.box {
-    position: fixed;
-    left: 10%;
-    top: 14%;
-    height: 75%;
-    width: 65%;
-    background: linear-gradient(108.73deg, rgba(217, 217, 217, 0.412) 51.75%, rgba(217, 217, 217, 0.46) 95.31%);
-    backdrop-filter: blur(2px);
-    border-radius: 39px;
-    padding: 20px;
-}
 
-.text1 {
-    font-size: 20px;
-}
 
-p{
-    color: white;
-}
 
-.Ouput {
-    height: 40px;
-    margin-left: 10px;
-    border-radius: 16px;
-    border-right: none;
-    border-top: none;
-    border-color: rgba(255, 253, 253, 0.8);
-}
 
-.Classe {
-    height: auto;
-    width: auto;
-    position: fixed;
-    left: 13%;
-    top: 20%;
-    color: white;
-}
 
-.OuputData {
-    height: 40px;
-    width: 60px;
-    margin-left: 10px;
-    border-radius: 16px;
-    border-right: none;
-    border-top: none;
-    border-color: rgba(255, 253, 253, 0.8);
-}
 
-.input{
-    outline: none;
-    border:solid;
-    border-color: white;
-    opacity: 50%;
-}
 
-.inputext
-{
-    border-radius: 16px;
-}
-.invia{
-    position: fixed;
-    top: 83%;
-    left: 56%;
-    height: 5%;
-    width: 8%;
-    border-radius: 30px;
-    background: #ffffff;
-    border: none;
-    font-size: 19px;
-}
 
-.invia:hover{
-    background-color: rgb(209, 209, 209);
-    cursor: pointer;
-}
 
-.info
-{
-    display: flex;
-    margin-left: 70%;
-}
 
-#cognomeInfo, #emailInfo{
-    margin-left: 30px;
-}
+
+

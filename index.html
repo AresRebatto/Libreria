@@ -12,17 +12,104 @@
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700&display=swap" rel="stylesheet">
     </head>
     <body>
-        <div class="boxForm"><br><br>
-            <h1 class="title">Log-in</h1>
-            <form method="post" name="modulo">
-                <b>Nome</b><input type="text" name="nome" class="input"><br><p id="failname"></p><br>
-                <b>Cognome</b><input type="text" name="cognome" class="input"><br><p id="failsurname"></p><br>
-                <b>Email</b><input type="text" name="email" class="input"><br><p id="failemail"></p><br>
-                <b>Data di nascita</b><input type="date" name="nascita" class="input"><br><br><br>
-            </form>
-            <input type="submit" value="Invia" onClick="Modulo()" class="invia">
+        <!-- Page 1 -->
+        <div id="frstPage">
+            <div class="boxForm"><br><br>
+                <h1 class="title">Log-in</h1>
+                <form method="post" name="modulo">
+                    <b>Nome</b><input type="text" name="nome" class="input"><br><p id="failname"></p><br>
+                    <b>Cognome</b><input type="text" name="cognome" class="input"><br><p id="failsurname"></p><br>
+                    <b>Email</b><input type="text" name="email" class="input"><br><p id="failemail"></p><br>
+                    <b>Data di nascita</b><input type="date" name="nascita" class="input"><br><br><br>
+                </form>
+                <input type="submit" value="Invia" onClick="Modulo()" class="invia">
+            </div>
+            <div class="aside">
+            </div>
         </div>
-        <div class="aside">
+        
+        <!-- Page 2 -->
+        <div id="scndPage">
+            <div class="info">
+                <p id="nomeInfo" class="text1">wedfefrfgfg</p>
+                <p id="cognomeInfo" class="text1">ferrferftgrstg</p>
+                <p id="emailInfo" class="text1">ares.rebatto@gmail.com</p>
+            </div>
+            <div class="box"></div>
+            <div class="Classe">
+                <table>
+                    <tr>
+                        <td>
+                            <p class="text1">Classe:</p>
+                        </td>
+                        <td>
+                            <input type="text" name="Classevalue" class="inputext" id="classroom" disabled>
+                        </td>
+                        <td style="width: 10%;"></td>
+                        <td>
+                            <p class="text1">Sezione:</p>
+                        </td>
+                        <td>
+                            <input type="text" name="Sezionevalue" class="inputext" id="classroom" disabled>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="height: 60px;"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <select name="Libro" class="picker">
+                                <option selected> --Selezione il libro-- </option>
+                                <option value="Inseguendo un raggio di luce">Inseguendo un raggio di luce</option>
+                                <option value="Oliver Twist">Oliver Twist</option>
+                                <option value="Percy Jackson">Percy Jackson</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="height: 60px;"></td>
+                    </tr>
+                    <tr>
+                        <table><br><br><br><br><br>
+                            <tr>
+                                <td>
+                                    <p class="text1">Data di ritiro: </p>
+                                </td>
+                                <td>
+                                    <input type="text" name="RitiroGiorno" class="OuputData" maxlength="2">
+                                </td>
+                                <td>
+                                    <p class="text1">/</p>
+                                </td>
+                                <td>
+                                    <input type="text" name="RitiroMese" class="OuputData" maxlength="2">
+                                </td>
+                                <td>
+                                    <p class="text1">/</p>
+                                </td>
+                                <td>
+                                    <input type="text" name="RitiroAnno" class="OuputData" maxlength="4">
+                                </td>
+                            </tr>
+                        </table>
+                    </tr>
+                    <tr>
+                        <td style="height: 60px;"></td>
+                    </tr>
+                    <tr>
+                        <table>
+                            <tr>
+                                <td>
+                                    <P class="text1">Data di Riconsegna:</P>
+                                <td>
+                                    <p id="dataRiconsegna"></p>
+                                </td>
+                            </tr>
+                        </table>
+                    </tr>
+                </table>
+            </div>
+            <button name="InviaLibro" class="submit" type="submit" onclick="Submit()">Invia</button>
         </div>
         <script type="text/javascript" src="verifica.js"></script>
     </body>
