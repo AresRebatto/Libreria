@@ -1,41 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Log-In</title>
-        <link rel="stylesheet" href="Style/index.css">
-        <link rel="icon" href="Style/img/book.png">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700&display=swap" rel="stylesheet">
-    </head>
-    <body>
-        <!-- Page 1 -->
-        <div id="frstPage">
-            <div class="boxForm"><br><br>
-                <h1 class="title">Log-in</h1>
-                <form method="post" name="modulo">
-                    <b>Nome</b><input type="text" name="nome" class="input"><br><p id="failname"></p><br>
-                    <b>Cognome</b><input type="text" name="cognome" class="input"><br><p id="failsurname"></p><br>
-                    <b>Email</b><input type="text" name="email" class="input"><br><p id="failemail"></p><br>
-                    <b>Data di nascita</b><input type="date" name="nascita" class="input"><br><br><br>
-                </form>
-                <input type="submit" value="Invia" onClick="Modulo()" class="invia">
-            </div>
-            <div class="aside">
-            </div>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log-In</title>
+    <link rel="stylesheet" href="Style/index.css">
+    <link rel="icon" href="Style/img/book.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Page 1 -->
+    <div id="frstPage">
+        <div class="boxForm"><br><br>
+            <h1 class="title">Log-in</h1>
+            <form method="post" name="modulo">
+                <b>Nome</b><input type="text" name="nome" class="input"><br>
+                <p id="failname"></p><br>
+                <b>Cognome</b><input type="text" name="cognome" class="input"><br>
+                <p id="failsurname"></p><br>
+                <b>Email</b><input type="text" name="email" class="input"><br>
+                <p id="failemail"></p><br>
+                <b>Data di nascita</b><input type="date" name="nascita" class="input"><br><br><br>
+            </form>
+            <input type="submit" value="Invia" onClick="Modulo()" class="invia">
         </div>
-        
-        <!-- Page 2 -->
-        <div id="scndPage">
-            <div class="info">
-                <p id="nomeInfo" class="text1">wedfefrfgfg</p>
-                <p id="cognomeInfo" class="text1">ferrferftgrstg</p>
-                <p id="emailInfo" class="text1">ares.rebatto@gmail.com</p>
-            </div>
-            <div class="box"></div>
+        <div class="aside">
+        </div>
+    </div>
+
+    <!-- Page 2 -->
+    <div id="scndPage">
+        <div class="info">
+            <p id="nomeInfo" class="text1"></p>
+            <p id="cognomeInfo" class="text1"></p>
+            <p id="emailInfo" class="text1"></p>
+        </div>
+        <div class="box"></div>
+        <form action="" name="moduloLibro">
             <div class="Classe">
                 <table>
                     <tr>
@@ -43,16 +49,19 @@
                             <p class="text1">Classe:</p>
                         </td>
                         <td>
-                            <input type="text" name="Classevalue" class="inputext" id="classroom" disabled>
+                            <input type="text" name="Classevalue" class="inputext" id="classroomn" disabled>
                         </td>
                         <td style="width: 10%;"></td>
                         <td>
                             <p class="text1">Sezione:</p>
                         </td>
                         <td>
-                            <input type="text" name="Sezionevalue" class="inputext" id="classroom" disabled>
+                            <input type="text" name="Sezionevalue" class="inputext" id="classrooms" disabled>
                         </td>
                     </tr>
+                    <td>
+                        <p style="color: red; font-size: 12px; position: relative; top: -20px; left: 145px;" id="Errorsc"></p>
+                    </td>
                     <tr>
                         <td style="height: 60px;"></td>
                     </tr>
@@ -76,21 +85,24 @@
                                     <p class="text1">Data di ritiro: </p>
                                 </td>
                                 <td>
-                                    <input type="text" name="RitiroGiorno" class="OuputData" maxlength="2">
+                                    <input type="text" name="RitiroGiorno" class="OuputData" maxlength="2" id="ritGiorno">
                                 </td>
                                 <td>
                                     <p class="text1">/</p>
                                 </td>
                                 <td>
-                                    <input type="text" name="RitiroMese" class="OuputData" maxlength="2">
+                                    <input type="text" name="RitiroMese" class="OuputData" maxlength="2" id="ritMese">
                                 </td>
                                 <td>
                                     <p class="text1">/</p>
                                 </td>
                                 <td>
-                                    <input type="text" name="RitiroAnno" class="OuputData" maxlength="4">
+                                    <input type="text" name="RitiroAnno" class="OuputData" maxlength="4" id="ritAnno">
                                 </td>
                             </tr>
+                            <td>
+                                <p style="color: red; font-size: 12px; position: relative; top: -20px; left: 145px;" id="errorData"></p>
+                            </td>
                         </table>
                     </tr>
                     <tr>
@@ -109,8 +121,11 @@
                     </tr>
                 </table>
             </div>
-            <button name="InviaLibro" class="submit" type="submit" onclick="Submit()">Invia</button>
-        </div>
-        <script type="text/javascript" src="verifica.js"></script>
-    </body>
+        </form>
+        <button name="InviaLibro" class="submit" type="submit" onclick="Submit()">Invia</button>
+        
+    </div>
+    <script type="text/javascript" src="verifica.js"></script>
+</body>
+
 </html>

@@ -1,21 +1,27 @@
+var email;
+var nome;
+var cognome;
 
 function Modulo() 
 {
     // Variabili associate ai campi del modulo
-    var nome = document.modulo.nome.value;
+    nome = document.modulo.nome.value;
     var failname = document.getElementById("failname");
     
-    var cognome = document.modulo.cognome.value;
+    cognome = document.modulo.cognome.value;
     var failsurname = document.getElementById("failsurname");
-    //var nascita = document.modulo.nascita.value;
-    var email = document.modulo.email.value;
+    
+    email = document.modulo.email.value;
     var failemail = document.getElementById("failemail");
     var dominio = getDomain(email);
 
     var nomeVerifica = true;
     var cognomeVerifica = true;
     var emailVerifica = true;
-    //How do a substring with JavaScript?
+
+    document.getElementById("nomeInfo").innerHTML = nome;
+    document.getElementById("cognomeInfo").innerHTML = cognome;
+    document.getElementById("emailInfo").innerHTML = email;
    
     if(nome == "")
     {
@@ -53,17 +59,16 @@ function Modulo()
         {
             document.getElementById("scndPage").style.visibility = 'visible';
             document.getElementById("frstPage").style.visibility ="hidden";
-            document.getElementById("classroom").setAttribute(disabled, enabled);
-            
+            document.getElementById("classroomn").removeAttribute("disabled");
+            document.getElementById("classrooms").removeAttribute("disabled");
+
         }else
         {
             document.getElementById("scndPage").style.visibility = 'visible';
             document.getElementById("frstPage").style.visibility ="hidden";
         }
 
-        document.getElementById("nomeInfo").innerHTML = nome;
-        document.getElementById("cognomeInfo").innerHTML = cognome;
-        document.getElementById("emailInfo").innerHTML = email;
+        
         
     }
 }
@@ -74,7 +79,83 @@ function getDomain(email) {
 }
 
 
-
 function Submit(){
+    var classe = document.moduloLibro.Classevalue.value;
+    var sezione = document.moduloLibro.Sezionevalue.value;
+    var giorno = document.moduloLibro.RitiroGiorno.value;
+    var mese = Number(document.moduloLibro.RitiroMese.value);
+    var anno = document.moduloLibro.RitiroAnno.value;
     
+    
+
+    if(classe == "" || classe > 5 || isNaN(classe) || !isNaN(sezione) ||
+        isNaN(giorno) || giorno > 31 || giorno == "" || isNaN(mese) || mese > 12 || mese == "" || isNaN(anno) ||
+        anno < 2023 || anno == "")
+    {
+        if(!isNaN(sezione) || classe == "" || classe > 5 || isNaN(classe))
+        {
+
+            document.getElementById("Errorsc").innerHTML = "Classe o sezione non valide";
+        }
+        
+        if(classe = "" || classe > 5 || isNaN(classe))
+        {
+            document.getElementById("errorData").innerHTML = "data non valida";
+
+        }
+
+        if(isNaN(giorno) || giorno > 31 || giorno == "" || isNaN(mese) || mese > 12 || mese == "" || isNaN(anno) || anno < 2023 || anno == "")
+        {
+            document.getElementById("errorData").innerHTML = "data non valida";
+        }else
+        {
+            document.getElementById("errorData").innerHTML = "";
+        }
+
+    }else
+    {
+        var meseRiconsegna = mese+1;
+        var riconsegna = giorno + "/" + meseRiconsegna+ "/"+ anno;
+        document.getElementById("dataRiconsegna").innerHTML = riconsegna;
+        inviaEmail(email, nome, cognome, riconsegna);
+    }
+
+    
+}
+
+
+
+async function inviaEmail(email, nome, cognome, riconsegna) {
+    const nodemailer = require('nodemailer');
+    let testAccount = await nodemailer.createTestAccount();
+
+    let transporter = nodemailer.createTransport({
+      host: 'smtp.gmail.com',
+      port: 587,
+      secure: false,
+      auth: {
+        user: 'testAccount.user',
+        pass: 'testAccount.pass'
+      }
+    });
+
+    // Crea il corpo del messaggio
+    let corpoMessaggio = `
+      Nome: ${nome}
+      Cognome: ${cognome}
+      Data di riconsegna: ${riconsegna}
+      Saluti,
+      La biblioteca dell'ITTS L. Da Vinci - O. Belluzzi
+    `;
+
+    // Configura le opzioni dell'email
+    let opzioniEmail = {
+      from: '<bibliotecascolasticaittsrimini@gmail.com>',
+      to: email,
+      subject: 'Informazioni sul libro',
+      text: corpoMessaggio
+    };
+
+    // Invia l'email
+    let info = await transporter.sendMail(opzioniEmail);
 }
