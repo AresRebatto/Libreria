@@ -15,9 +15,13 @@ function Modulo()
     var failemail = document.getElementById("failemail");
     var dominio = getDomain(email);
 
+    var bornDate = document.modulo.nascita.value;
+    var failDate = document.getElementById("faildate");
+
     var nomeVerifica = true;
     var cognomeVerifica = true;
     var emailVerifica = true;
+    var dataVerifica = true;
 
     document.getElementById("nomeInfo").innerHTML = nome;
     document.getElementById("cognomeInfo").innerHTML = cognome;
@@ -31,6 +35,16 @@ function Modulo()
     {
         failname.innerHTML = "";
         nomeVerifica=true;
+    }
+
+    if(bornDate == "")
+    {
+        dataVerifica = false;
+        failDate.innerHTML = "Si prega di inserire una data valida";
+    }else
+    {
+        dataVerifica = true;
+        failDate.innerHTML = "";
     }
 
     if(cognome == "")
@@ -53,7 +67,7 @@ function Modulo()
         emailVerifica = true;
     }
 
-    if(nomeVerifica && cognomeVerifica && emailVerifica)
+    if(nomeVerifica && cognomeVerifica && emailVerifica && dataVerifica)
     {
         if(dominio == "studenti.ittsrimini.edu.it")
         {
@@ -96,12 +110,18 @@ function Submit(){
         {
 
             document.getElementById("Errorsc").innerHTML = "Classe o sezione non valide";
+        }else
+        {
+            document.getElementById("Errorsc").innerHTML = "";
         }
         
         if(classe = "" || classe > 5 || isNaN(classe))
         {
             document.getElementById("errorData").innerHTML = "data non valida";
 
+        }else
+        {
+            document.getElementById("errorData").innerHTML = "data non valida";
         }
 
         if(isNaN(giorno) || giorno > 31 || giorno == "" || isNaN(mese) || mese > 12 || mese == "" || isNaN(anno) || anno < 2023 || anno == "")

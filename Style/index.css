@@ -15,7 +15,7 @@ body{
 {
     display: flex;
     position: absolute;
-    margin-left: 64%;
+    margin-left: 61%;
 }
 
 .picker
@@ -191,5 +191,20 @@ form{
     position: relative;
     left: 105px;
     font-size: 13px;
+    margin: 0;
+}
+
+.borndate
+{
+    font-family: 'Nunito', sans-serif;
+    padding-left: 10px;
+}
+
+#faildate
+{
+    color: red;
+    font-size: 11px;
+    position: relative;
+    left: 153px;
     margin: 0;
 }
