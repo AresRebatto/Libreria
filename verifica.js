@@ -22,6 +22,7 @@ function Modulo()
     var cognomeVerifica = true;
     var emailVerifica = true;
     var dataVerifica = true;
+    var prof;
 
     document.getElementById("nomeInfo").innerHTML = nome;
     document.getElementById("cognomeInfo").innerHTML = cognome;
@@ -80,6 +81,9 @@ function Modulo()
         {
             document.getElementById("scndPage").style.visibility = 'visible';
             document.getElementById("frstPage").style.visibility ="hidden";
+            document.getElementById("classroomn").style.backgroundColor = '#cccccc';
+            document.getElementById("classrooms").style.backgroundColor = '#cccccc';
+            prof = true;
         }
 
         
@@ -102,7 +106,11 @@ function Submit(){
     var anno = document.moduloLibro.RitiroAnno.value;
     
     
-
+    if(prof)
+    {
+        classe = 1;
+        sezione = "A";
+    }
     if(classe == "" || classe > 5 || isNaN(classe) || !isNaN(sezione) ||
         isNaN(giorno) || giorno > 31 || giorno == "" || isNaN(mese) || mese > 12 || mese == "" || isNaN(anno) ||
         anno < 2023 || anno == "")
