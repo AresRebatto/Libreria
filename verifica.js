@@ -94,6 +94,7 @@ function getDomain(email) {
 
 
 function Submit(){
+    document.title = 'Prenoazione libro';
     var classe = document.moduloLibro.Classevalue.value;
     var sezione = document.moduloLibro.Sezionevalue.value;
     var giorno = document.moduloLibro.RitiroGiorno.value;
