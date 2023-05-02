@@ -147,9 +147,11 @@ form{
 {
     margin-left: 10px;
     border-radius: 16px;
+    border: solid;
     border-right: none;
     border-top: none;
-    border-color: rgba(97, 97, 97, 0.8);
+    border-color: rgba(64, 64, 64, 0.8);
+    font-family: 'Nunito';
 }
 
 .input:focus
@@ -207,4 +209,17 @@ form{
     position: relative;
     left: 153px;
     margin: 0;
+}
+
+#errorData
+{
+    position: relative;
+    margin-top: 0px;
+    margin-bottom: -20px;
+}
+
+#Errorsc
+{
+    position: relative;
+    margin-top: 0px;
 }
